@@ -1,0 +1,34 @@
+name: ci-pr
+
+# Puerta de calidad de los PR: `npm run verify` (scripts/verify.mjs): lint, tokens, catálogo y enlaces.
+# No hay dependencias que instalar ni nada que desplegar.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Cancela ejecuciones viejas cuando llegan commits nuevos al mismo PR.
+concurrency:
+  group: ci-pr-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Verify (lint + tokens + catálogo + enlaces)
+        run: npm run verify
+
+      - name: Espacios en blanco
+        run: git diff --check $(git hash-object -t tree /dev/null) HEAD
