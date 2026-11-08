@@ -1,0 +1,15 @@
+{
+  "name": "nexorafit-design-system",
+  "private": true,
+  "description": "Design system de Nexora Fit: tokens, specs y visor sin conexión. Sin dependencias: los scripts son Node puro.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "tokens": "node scripts/tokens.mjs",
+    "verify": "node scripts/verify.mjs",
+    "sync": "node scripts/sync-tokens.mjs"
+  }
+}

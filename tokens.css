@@ -1,0 +1,155 @@
+/* Nexora Fit · tokens generados desde tokens.json (scripts/tokens.mjs). No editar: `npm run tokens`. */
+/* El tema claro va en :root; class="dark" en cualquier contenedor activa el oscuro, igual que en nexora-fit. */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("fonts/bebas-neue-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  /* Paleta de marca */
+  --color-negro: #0b0b0b; /* Fondo del tema oscuro y texto del tema claro. */
+  --color-carbon: #161616; /* Tarjetas y superficies sobre negro. */
+  --color-grafito: #2a2a2a; /* Bordes decorativos y separadores en oscuro. */
+  --color-blanco: #ffffff; /* Fondo del tema claro y texto del tema oscuro. */
+  --color-humo: #f5f5f5; /* Superficies suaves en claro: secciones alternas, filas de tabla, `muted`. */
+  --color-niebla: #e5e5e5; /* Bordes decorativos y separadores en claro. */
+  --color-gris: #8a8a8a; /* Texto secundario en oscuro y borde de los campos en los dos temas. No pasa AA como texto sobre blanco. */
+  --color-acero: #6b6b6b; /* Texto secundario en claro (5,33:1 sobre blanco). */
+  --color-rojo: #e10600; /* Botones de compra, precios en claro y la sección del pack. */
+  --color-rojo-oscuro: #b80500; /* Hover y estado presionado de los botones rojos. */
+  --color-rojo-vivo: #ff3b30; /* Precios y texto rojo sobre fondo oscuro (el rojo base no pasa AA ahí). */
+  /* Tipografía */
+  --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --text-hero: clamp(3rem, 1.8rem + 5.3vw, 6rem); /* 48 → 96 px */
+  --text-hero--line-height: 0.95;
+  --text-display-1: clamp(2.5rem, 1.9rem + 2.6vw, 4rem); /* 40 → 64 px */
+  --text-display-1--line-height: 1;
+  --text-display-2: clamp(2rem, 1.6rem + 1.75vw, 3rem); /* 32 → 48 px */
+  --text-display-2--line-height: 1;
+  --text-display-3: clamp(1.5rem, 1.3rem + 0.9vw, 2rem); /* 24 → 32 px */
+  --text-display-3--line-height: 1.1;
+  --text-price-lg: clamp(2.5rem, 2.1rem + 1.75vw, 3.5rem); /* 40 → 56 px */
+  --text-price-lg--line-height: 1;
+  --text-xl: 1.25rem; /* 20 px */
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-lg: 1.125rem; /* 18 px */
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-base: 1rem; /* 16 px */
+  --text-base--line-height: calc(1.5 / 1);
+  --text-sm: 0.875rem; /* 14 px */
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-xs: 0.75rem; /* 12 px */
+  --text-xs--line-height: calc(1 / 0.75);
+  /* Radios */
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px); /* Insignias y casillas. */
+  --radius-md: calc(var(--radius) - 2px); /* Botones y campos. */
+  --radius-lg: var(--radius); /* Tarjetas, imágenes dentro de tarjetas, diálogos, avisos. */
+  --radius-xl: calc(var(--radius) + 4px); /* Contenido de `Dialog` y `AlertDialog` (shadcn). */
+  --radius-full: calc(infinity * 1px); /* Botón ▶ del video, avatar, puntos de estado, barra de `Progress`. */
+  /* Espaciado (escala de Tailwind, múltiplos de 4 px) */
+  --spacing: 0.25rem;
+  --space-1: 0.25rem; /* Ícono con texto, insignias. */
+  --space-2: 0.5rem; /* Ícono con texto, insignias. */
+  --space-3: 0.75rem; /* Dentro de tarjetas, entre campo y etiqueta. */
+  --space-4: 1rem; /* Padding de tarjeta en celular y margen lateral en celular. */
+  --space-6: 1.5rem; /* Padding de tarjeta en escritorio, entre grupos de un formulario. */
+  --space-8: 2rem; /* Entre bloques de una sección. */
+  --space-12: 3rem; /* Entre bloques de una sección. */
+  --space-16: 4rem; /* Padding vertical de sección en celular (`py-16`). */
+  --space-24: 6rem; /* Padding vertical de sección desde `md` (`md:py-24`). */
+  /* Breakpoints */
+  --breakpoint-sm: 40rem; /* Tarjetas en 2 columnas. */
+  --breakpoint-md: 48rem; /* Revisión obligatoria. Tablas desde aquí; por debajo, lista de tarjetas. */
+  --breakpoint-lg: 64rem; /* Barra lateral del panel, `BuyBar` lateral. */
+  --breakpoint-xl: 80rem; /* Revisión obligatoria de escritorio. */
+  /* Sombras */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* Barra superior al hacer scroll; pestaña activa. */
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Lista abierta de `Select`. */
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Elementos que flotan: `Sheet`, menús. La marca es plana: las tarjetas no llevan sombra. */
+  /* Movimiento */
+  --duration-fast: 150ms; /* Color y opacidad en hover y foco (`duration-150`). */
+  --duration-base: 200ms; /* Acordeón, pestañas, aparición de avisos (`duration-200`). */
+  --duration-slow: 300ms; /* `Sheet` y diálogos (`duration-300`). */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1); /* Al entrar (`ease-out`). */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1); /* Al salir (`ease-in`). */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); /* Transiciones de color por defecto de Tailwind. */
+  /* Tamaños */
+  --size-control-sm: 2.25rem; /* `Button` y `SelectTrigger` `sm` (`h-9`): tablas del panel en escritorio. Nunca en celular. */
+  --size-control: 2.75rem; /* Alto por defecto de botones, campos y `Select` (`h-11`); objetivo táctil mínimo. */
+  --size-control-lg: 3rem; /* `Button` `lg` (`h-12`): botones principales del sitio y del checkout. */
+  --size-check: 1.25rem; /* `Checkbox` y `RadioGroupItem` visibles (`size-5`), con zona táctil de 44 px. */
+  --size-accordion-trigger: 3.5rem; /* Alto mínimo del disparador de `Accordion` (`min-h-14`). */
+  --size-progress: 0.5rem; /* Alto de `Progress` (`h-2`). */
+  --size-header: 4rem; /* Barra superior (`h-16`). */
+  --size-bottom-bar: 4rem; /* `BuyBar`, navegación inferior del panel y barra «Guardar día», más el área segura. */
+  --size-icon-sm: 1rem; /* Junto a texto `sm`, dentro de insignias y botones. */
+  --size-icon: 1.25rem; /* Botones y menús. */
+  --size-icon-lg: 1.5rem; /* Listas de «Qué incluye», estados vacíos y de error. */
+  --size-container: 72rem; /* Ancho máximo del contenedor (`max-w-6xl`). */
+  --size-form: 28rem; /* Formularios de una columna (`max-w-md`). */
+  /* Capas */
+  --z-bottom-bar: 30; /* `BuyBar` y barra «Guardar día» (`z-30`). */
+  --z-nav: 40; /* Navegación inferior del panel (`z-40`). */
+  --z-overlay: 50; /* Barra superior, diálogos, `Sheet`, menús (`z-50`). */
+  --z-toast: 100; /* Avisos de `sonner` (`z-[100]`). */
+  /* Tokens semánticos: tema claro */
+  --background: var(--color-blanco); /* Fondo de página o sección. */
+  --foreground: var(--color-negro); /* Texto principal. */
+  --card: var(--color-blanco); /* Tarjetas. */
+  --card-foreground: var(--color-negro); /* Texto sobre `card`. */
+  --popover: var(--color-blanco); /* Menús, diálogos, `Sheet` y avisos. */
+  --popover-foreground: var(--color-negro); /* Texto sobre `popover`. */
+  --primary: var(--color-negro); /* Acción principal que no vende, casillas marcadas, barras de progreso, pestaña activa. Nunca rojo. */
+  --primary-foreground: var(--color-blanco); /* Texto sobre `primary`. */
+  --secondary: var(--color-humo); /* Botón secundario. */
+  --secondary-foreground: var(--color-negro); /* Texto sobre `secondary`. */
+  --muted: var(--color-humo); /* Superficies secundarias y esqueletos. */
+  --muted-foreground: var(--color-acero); /* Texto secundario, ayudas y metadatos. */
+  --accent: var(--color-humo); /* Hover de menús, botones `outline` y `ghost`. */
+  --accent-foreground: var(--color-negro); /* Texto sobre `accent`. */
+  --border: var(--color-niebla); /* Bordes decorativos: tarjetas, separadores, tablas. Nunca el único borde de un control. */
+  --input: var(--color-gris); /* Borde de campos, casillas, radios y botones `outline` (≥ 3:1). */
+  --ring: var(--color-negro); /* Anillo de foco. */
+  --cta: var(--color-rojo); /* Fondo de los botones de compra y de la sección del pack. Uno por bloque visible. */
+  --cta-hover: var(--color-rojo-oscuro); /* Hover y presionado del `cta`. */
+  --cta-foreground: var(--color-blanco); /* Texto sobre `cta`. */
+  --price: var(--color-rojo); /* Precio vigente como texto. */
+  --destructive: #b42318; /* Fondo de botones destructivos (anular, borrar), solo dentro de un `AlertDialog`. Texto blanco encima. */
+  --danger: #b42318; /* Texto e ícono de error; siempre con `CircleAlert` y texto. */
+  --success: #15803d; /* Texto e ícono de éxito (aprobado, día completado). */
+  --warning: #b45309; /* Texto e ícono de aviso (pendiente, por vencer). */
+}
+.dark {
+  --background: var(--color-negro);
+  --foreground: var(--color-blanco);
+  --card: var(--color-carbon);
+  --card-foreground: var(--color-blanco);
+  --popover: var(--color-carbon);
+  --popover-foreground: var(--color-blanco);
+  --primary: var(--color-blanco);
+  --primary-foreground: var(--color-negro);
+  --secondary: var(--color-grafito);
+  --secondary-foreground: var(--color-blanco);
+  --muted: var(--color-carbon);
+  --muted-foreground: var(--color-gris);
+  --accent: var(--color-grafito);
+  --accent-foreground: var(--color-blanco);
+  --border: var(--color-grafito);
+  --ring: var(--color-blanco);
+  --price: var(--color-rojo-vivo);
+  --danger: #f87171;
+  --success: #4ade80;
+  --warning: #fbbf24;
+}

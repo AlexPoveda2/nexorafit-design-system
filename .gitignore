@@ -1,0 +1,13 @@
+# Herramientas y dependencias locales
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+# Capturas y pruebas locales: van en el scratchpad, no aquí
+screenshots/
+test-results/
