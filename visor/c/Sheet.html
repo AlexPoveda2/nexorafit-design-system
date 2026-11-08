@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Overlays">
+<title>Sheet · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/sheet.tsx · <a href="../../components/Sheet/README.md">Spec</a></p>
+  <p>Panel lateral o inferior: menú móvil del sitio (desde la derecha) y «Más» del panel (desde abajo).</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Derecha y abajo</h2>
+  <p class="pv-note" style="margin-bottom:12px">75 % del ancho (máximo 384 px desde <code class="pv-code">sm</code>) a la derecha; ancho completo abajo, respetando el área segura.</p>
+  <div class="pv-grid">
+    <div class="pv-stage dark" style="max-width:360px"><div class="pv-stage-backdrop"></div>
+      <div class="nx-sheet is-static" data-side="right" role="dialog" aria-labelledby="sh0-t">
+        <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="sh0-t" style="font-family:var(--font-display);font-size:20px;font-weight:400">Nexora Fit</h2></div>
+        <nav class="nx-sheet-nav" aria-label="Menú"><button class="nx-btn" data-variant="ghost" type="button">Planes</button><button class="nx-btn" data-variant="ghost" type="button">Preguntas frecuentes</button></nav>
+        <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar"><i data-icon="x"></i></button>
+      </div>
+    </div>
+    <div class="pv-stage" style="max-width:360px"><div class="pv-stage-backdrop"></div>
+      <div class="nx-sheet is-static" data-side="bottom" role="dialog" aria-labelledby="sh1-t">
+        <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="sh1-t">Más</h2><p class="nx-sheet-description">Secciones del panel</p></div>
+        <nav class="nx-sheet-nav" aria-label="Más secciones"><button class="nx-btn" data-variant="ghost" type="button">Planes</button><button class="nx-btn" data-variant="ghost" type="button">Productos</button><button class="nx-btn" data-variant="ghost" type="button">Personalizados</button><button class="nx-btn" data-variant="ghost" type="button">Acceso directo</button></nav>
+        <div class="nx-sheet-footer"></div>
+        <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar"><i data-icon="x"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Interactivo</h2>
+  <div class="pv-row"><button class="nx-btn" data-variant="outline" type="button" data-open="sh2">Abrir a la derecha</button><button class="nx-btn" data-variant="outline" type="button" data-open="sh3">Abrir abajo</button></div>
+  <dialog class="nx-sheet" id="sh2" data-side="right" aria-labelledby="sh2-t" data-dismissable>
+    <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="sh2-t">Filtros (2)</h2><p class="nx-sheet-description">Ventas del panel</p></div>
+    <div style="padding:0 16px" class="nx-field"><label class="nx-label" for="sh2-i">Correo del alumno</label><input class="nx-input" id="sh2-i" type="email"></div>
+    <div class="nx-sheet-footer"><button class="nx-btn" data-variant="default" type="button" data-close>Aplicar filtros</button></div>
+    <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar" data-close><i data-icon="x"></i></button>
+  </dialog>
+  <dialog class="nx-sheet" id="sh3" data-side="bottom" aria-labelledby="sh3-t" data-dismissable>
+    <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="sh3-t">Más</h2></div>
+    <nav class="nx-sheet-nav" aria-label="Más secciones"><button class="nx-btn" data-variant="ghost" type="button">Planes</button><button class="nx-btn" data-variant="ghost" type="button">Productos</button></nav>
+    <div class="nx-sheet-footer"></div>
+    <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar" data-close><i data-icon="x"></i></button>
+  </dialog>
+</section>
+</body>
+</html>

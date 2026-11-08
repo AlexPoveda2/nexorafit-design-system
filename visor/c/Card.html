@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Visualización">
+<title>Card · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/card.tsx · <a href="../../components/Card/README.md">Spec</a></p>
+  <p>Superficie con borde, sin sombra: <code class="pv-code">rounded-lg border bg-card</code>, padding 16 px en celular y 24 px desde <code class="pv-code">md</code>.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Partes</h2>
+  <p class="pv-note" style="margin-bottom:12px"><code class="pv-code">CardHeader</code>, <code class="pv-code">CardTitle</code>, <code class="pv-code">CardDescription</code>, <code class="pv-code">CardAction</code>, <code class="pv-code">CardContent</code>, <code class="pv-code">CardFooter</code>.</p>
+  <div class="pv-grid">
+    <div class="nx-card">
+      <div class="nx-card-header">
+        <div class="nx-card-title">Boxeo · Básico</div>
+        <div class="nx-card-description">Acceso hasta el 23 oct 2027</div>
+        <div class="nx-card-action"><span class="nx-badge" data-variant="warning">Vence en 5 días</span></div>
+      </div>
+      <div class="nx-card-content"><p>4 semanas · 3 días · 50 min</p></div>
+      <div class="nx-card-footer"><button class="nx-btn" data-variant="default" type="button">Entrenar</button></div>
+    </div>
+    <div class="nx-card" data-size="sm">
+      <div class="nx-card-header">
+        <div class="nx-card-title">size="sm"</div>
+        <div class="nx-card-description">Padding de 12 px para listas densas.</div>
+      </div>
+      <div class="nx-card-content"><p>Contenido</p></div>
+    </div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Con imagen y como enlace</h2>
+  <p class="pv-note" style="margin-bottom:12px">Si toda la tarjeta es un enlace, el enlace es el título y se extiende con <code class="pv-code">after:absolute after:inset-0</code>: un solo foco, nunca un <code class="pv-code">div</code> con <code class="pv-code">onClick</code>. Sin fotos todavía: bloque <code class="pv-code">bg-muted</code> con la misma proporción.</p>
+  <div class="pv-grid">
+    <article class="nx-card" style="position:relative">
+      <div class="nx-card-media" role="img" aria-label="Foto del plan (pendiente)"></div>
+      <div class="nx-card-header">
+        <h3 class="nx-card-title" style="font-family:var(--font-display);font-size:var(--text-display-3);line-height:1.1;font-weight:400"><a href="#boxeo" style="text-decoration:none">Boxeo<span style="position:absolute;inset:0" aria-hidden="true"></span></a></h3>
+        <div class="nx-card-description">Guardia, golpes y desplazamientos.</div>
+      </div>
+      <div class="nx-card-content"><span class="nx-badge" data-variant="neutral">Básico + Intermedio</span></div>
+    </article>
+  </div>
+</section>
+</body>
+</html>

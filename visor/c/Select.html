@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>Select · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/select.tsx · <a href="../../components/Select/README.md">Spec</a></p>
+  <p>Lista de opciones de Radix. Disparador de 44 px y 16 px como <code class="pv-code">Input</code>; <code class="pv-code">sm</code> (36 px) solo en tablas del panel en escritorio.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Disparador</h2>
+  <div class="pv-stack">
+    <div class="nx-field"><label class="nx-label" id="s1-l">Días por semana</label><button class="nx-select" type="button" role="combobox" aria-expanded="false" aria-labelledby="s1-l" data-placeholder><span class="nx-select-value">Elige una opción</span><i data-icon="chevron-down"></i></button></div>
+    <div class="nx-field"><label class="nx-label" id="s2-l">Con valor</label><button class="nx-select" type="button" role="combobox" aria-expanded="false" aria-labelledby="s2-l"><span class="nx-select-value">3 días</span><i data-icon="chevron-down"></i></button></div>
+    <div class="nx-field"><label class="nx-label" id="s3-l">Foco</label><button class="nx-select is-focus" type="button" role="combobox" aria-expanded="false" aria-labelledby="s3-l"><span class="nx-select-value">3 días</span><i data-icon="chevron-down"></i></button></div>
+    <div class="nx-field"><label class="nx-label" id="s4-l">Con error</label><button class="nx-select" type="button" role="combobox" aria-expanded="false" aria-labelledby="s4-l" aria-invalid="true" aria-describedby="s4-e" data-placeholder><span class="nx-select-value">Elige una opción</span><i data-icon="chevron-down"></i></button><p class="nx-error" id="s4-e" role="alert"><i data-icon="circle-alert"></i>Elige cuántos días puedes entrenar.</p></div>
+    <div class="nx-field"><label class="nx-label is-disabled" id="s5-l">Deshabilitado</label><button class="nx-select" type="button" role="combobox" aria-expanded="false" aria-labelledby="s5-l" disabled><span class="nx-select-value">3 días</span><i data-icon="chevron-down"></i></button></div>
+    <div class="pv-row"><button class="nx-select" data-size="sm" type="button" role="combobox" aria-expanded="false" aria-label="Estado"><span class="nx-select-value">Aprobadas</span><i data-icon="chevron-down"></i></button><span class="pv-note">size="sm"</span></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Lista abierta</h2>
+  <p class="pv-note" style="margin-bottom:12px">Referencia estática del contenido: <code class="pv-code">bg-popover</code>, <code class="pv-code">shadow-md</code>, <code class="pv-code">ring-1</code>; ítem activo en <code class="pv-code">accent</code> y check a la derecha.</p>
+  <div class="nx-select-content" role="listbox" aria-label="Días por semana" style="max-width:14rem">
+    <div class="nx-select-label">Días por semana</div>
+    <div class="nx-select-item" role="option" aria-selected="false">2 días</div>
+    <div class="nx-select-item is-focus" role="option" aria-selected="true">3 días<i data-icon="check"></i></div>
+    <div class="nx-select-item" role="option" aria-selected="false">4 días</div>
+    <div class="nx-select-sep" role="separator"></div>
+    <div class="nx-select-item" role="option" aria-selected="false" aria-disabled="true">7 días</div>
+  </div>
+</section>
+</body>
+</html>

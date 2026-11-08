@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Visualización">
+<title>Badge · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/badge.tsx · <a href="../../components/Badge/README.md">Spec</a></p>
+  <p>Insignia en mayúsculas, 12 px. El texto sale de un mapa en el <code class="pv-code">domain/</code> de la feature, nunca del valor crudo de la API.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Variantes</h2>
+  <p class="pv-note" style="margin-bottom:12px"><code class="pv-code">cta</code> solo en el sitio público.</p>
+  <div class="pv-row">
+    <span class="nx-badge" data-variant="neutral">Básico + Intermedio</span>
+    <span class="nx-badge" data-variant="cta">Ahorra 60 %</span>
+    <span class="nx-badge" data-variant="success">Aprobada</span>
+    <span class="nx-badge" data-variant="warning">Vence en 5 días</span>
+    <span class="nx-badge" data-variant="danger">Rechazada</span>
+    <span class="nx-badge" data-variant="outline">Anulada</span>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Estados de la API</h2>
+  <div class="pv-scroll"><table class="pv-table">
+    <thead><tr><th scope="col">Recurso</th><th scope="col">status</th><th scope="col">Insignia</th></tr></thead>
+    <tbody>
+      <tr><td>Orden</td><td class="pv-code">pending</td><td><span class="nx-badge" data-variant="warning">Pendiente</span></td></tr>
+      <tr><td>Orden</td><td class="pv-code">approved</td><td><span class="nx-badge" data-variant="success">Aprobada</span></td></tr>
+      <tr><td>Orden</td><td class="pv-code">declined</td><td><span class="nx-badge" data-variant="danger">Rechazada</span></td></tr>
+      <tr><td>Orden</td><td class="pv-code">expired</td><td><span class="nx-badge" data-variant="neutral">Expirada</span></td></tr>
+      <tr><td>Orden</td><td class="pv-code">voided · refunded</td><td><span class="nx-badge" data-variant="outline">Anulada</span> <span class="nx-badge" data-variant="outline">Reembolsada</span></td></tr>
+      <tr><td>Video</td><td class="pv-code">draft</td><td><span class="nx-badge" data-variant="neutral">Borrador</span></td></tr>
+      <tr><td>Video</td><td class="pv-code">processing</td><td><span class="nx-badge" data-variant="warning"><i data-icon="loader-circle" class="nx-spin"></i>Procesando</span></td></tr>
+      <tr><td>Video</td><td class="pv-code">ready</td><td><span class="nx-badge" data-variant="success">Listo</span></td></tr>
+      <tr><td>Video</td><td class="pv-code">failed</td><td><span class="nx-badge" data-variant="danger">Falló</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+</body>
+</html>

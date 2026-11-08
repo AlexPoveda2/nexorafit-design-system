@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Navegación">
+<title>Tabs · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/tabs.tsx · <a href="../../components/Tabs/README.md">Spec</a></p>
+  <p>Pestañas de Radix. Selector de nivel Básico | Intermedio; la activa nunca va en rojo.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">default</h2>
+  <div class="nx-tabs">
+    <div class="nx-tablist" data-variant="default" role="tablist" aria-label="Nivel">
+      <button class="nx-tab" type="button" role="tab" id="a-t0" aria-controls="a-p0" aria-selected="true" tabindex="0">Básico</button>
+      <button class="nx-tab" type="button" role="tab" id="a-t1" aria-controls="a-p1" aria-selected="false" tabindex="-1">Intermedio</button>
+    </div>
+    <div class="nx-tabpanel" role="tabpanel" id="a-p0" aria-labelledby="a-t0" tabindex="0">4 semanas · 3 días · 50 min</div>
+    <div class="nx-tabpanel" role="tabpanel" id="a-p1" aria-labelledby="a-t1" hidden tabindex="0">4 semanas · 4 días · 60 min</div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">A todo el ancho (celular)</h2>
+  <div class="nx-tabs">
+    <div class="nx-tablist is-full" data-variant="default" role="tablist" aria-label="Nivel">
+      <button class="nx-tab" type="button" role="tab" id="b-t0" aria-controls="b-p0" aria-selected="true" tabindex="0">Básico</button>
+      <button class="nx-tab" type="button" role="tab" id="b-t1" aria-controls="b-p1" aria-selected="false" tabindex="-1">Intermedio</button>
+    </div>
+    <div class="nx-tabpanel" role="tabpanel" id="b-p0" aria-labelledby="b-t0" tabindex="0">Semana 1 a 4</div>
+    <div class="nx-tabpanel" role="tabpanel" id="b-p1" aria-labelledby="b-t1" hidden tabindex="0">Semana 1 a 4</div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">line</h2>
+  <div class="nx-tabs">
+    <div class="nx-tablist" data-variant="line" role="tablist" aria-label="Nivel">
+      <button class="nx-tab" type="button" role="tab" id="c-t0" aria-controls="c-p0" aria-selected="true" tabindex="0">Rutinas</button>
+      <button class="nx-tab" type="button" role="tab" id="c-t1" aria-controls="c-p1" aria-selected="false" tabindex="-1">Técnicas</button>
+      <button class="nx-tab" type="button" role="tab" id="c-t2" aria-controls="c-p2" aria-selected="false" tabindex="-1" disabled>Equipo</button>
+    </div>
+    <div class="nx-tabpanel" role="tabpanel" id="c-p0" aria-labelledby="c-t0" tabindex="0">Rutinas escritas</div>
+    <div class="nx-tabpanel" role="tabpanel" id="c-p1" aria-labelledby="c-t1" hidden tabindex="0">Videos de técnica</div>
+    <div class="nx-tabpanel" role="tabpanel" id="c-p2" aria-labelledby="c-t2" hidden tabindex="0"></div>
+  </div>
+</section>
+</body>
+</html>

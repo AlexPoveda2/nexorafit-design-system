@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexora Fit · Design system</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;display:grid;grid-template-columns:248px 1fr;font-family:var(--font-sans);background:var(--muted);color:var(--foreground);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+aside{overflow:auto;padding:16px 12px 24px;background:var(--background);color:var(--foreground);border-right:1px solid var(--border)}
+.brand{display:grid;gap:2px;padding:4px 8px 16px;text-decoration:none;color:inherit}
+.brand strong{font-family:var(--font-display);font-weight:400;font-size:28px;line-height:1;letter-spacing:.025em}
+.brand span{font-size:12px;color:var(--muted-foreground)}
+aside input{width:100%;height:44px;padding:4px 12px;border:1px solid var(--input);border-radius:var(--radius-lg);background:color-mix(in oklab,var(--input) 30%,transparent);color:inherit;font:inherit;font-size:16px}
+aside input::placeholder{color:var(--muted-foreground)}
+aside input:focus-visible{outline:none;border-color:var(--ring);box-shadow:0 0 0 3px color-mix(in oklab,var(--ring) 50%,transparent)}
+aside h2{margin:20px 8px 2px;font-family:var(--font-display);font-weight:400;font-size:24px;line-height:1;letter-spacing:.01em}
+aside h2 small{display:block;margin-top:4px;font-family:var(--font-sans);font-size:12px;line-height:16px;letter-spacing:0;color:var(--muted-foreground)}
+aside h3{margin:14px 8px 4px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-foreground)}
+aside a.item{display:flex;align-items:center;justify-content:space-between;min-height:36px;padding:6px 8px;border-radius:var(--radius-md);color:inherit;text-decoration:none;font-size:14px}
+aside a.item:hover{background:var(--accent)}
+aside a.item[aria-current="page"]{background:var(--secondary);font-weight:600}
+aside .draft{font-size:11px;color:var(--warning)}
+main{display:flex;flex-direction:column;min-width:0;min-height:0}
+header.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;background:var(--background);border-bottom:1px solid var(--border)}
+header.bar h1{margin:0;font-family:var(--font-display);font-weight:400;font-size:32px;line-height:1;letter-spacing:.01em}
+header.bar .meta{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+header.bar .meta a{font-size:14px;color:var(--muted-foreground)}
+.controls{display:flex;flex-wrap:wrap;gap:8px}
+.seg{display:inline-flex;gap:2px;padding:3px;border-radius:var(--radius-lg);background:var(--muted)}
+.seg button{min-height:36px;padding:0 12px;border:1px solid transparent;border-radius:var(--radius-md);background:transparent;color:var(--muted-foreground);font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--background);color:var(--foreground);box-shadow:var(--shadow-sm)}
+.stage{flex:1;min-height:0;overflow:auto;padding:16px}
+.stage iframe{display:block;width:100%;height:100%;min-height:480px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--background)}
+.stage[data-width] iframe{margin:0 auto}
+@media(max-width:760px){
+  body{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  aside{max-height:38vh;border-right:0;border-bottom:1px solid var(--border)}
+  .stage{padding:8px}
+}
+</style>
+</head>
+<body>
+<aside class="dark" aria-label="Catálogo">
+  <a class="brand" href="#Colores"><strong>Nexora Fit</strong><span>Design system · visor de referencia</span></a>
+  <input id="q" type="search" placeholder="Buscar…" aria-label="Buscar en el catálogo" autocomplete="off">
+  <nav id="nav" aria-label="Catálogo"></nav>
+</aside>
+<main>
+  <header class="bar">
+    <div class="meta"><h1 id="t">Colores</h1><a id="spec" href="../docs/VISUAL.md">Spec</a></div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Tema"><button type="button" data-tema="light" aria-pressed="true">Claro</button><button type="button" data-tema="dark" aria-pressed="false">Oscuro</button></div>
+      <div class="seg" role="group" aria-label="Ancho"><button type="button" data-ancho="escritorio" aria-pressed="true">Escritorio</button><button type="button" data-ancho="768" aria-pressed="false">768 px</button><button type="button" data-ancho="360" aria-pressed="false">360 px</button></div>
+    </div>
+  </header>
+  <div class="stage" id="stage"><iframe id="f" title="Vista previa"></iframe></div>
+</main>
+<script>
+// Catálogo: cada página de c/ aparece una sola vez y su <meta name="nx-group"> repite "sección · grupo".
+// Cada ítem de "Componentes" tiene su spec en components/<Nombre>/README.md. `npm run verify` lo comprueba.
+var catalog=[
+  {section:"Fundamentos",note:"Tokens de tokens.json",groups:[
+    {title:"Tokens",items:["Colores","Tipografia","Espaciado","Radios","Sombras","Movimiento"]}
+  ]},
+  {section:"Componentes",note:"nexora-fit · src/shared/ui",groups:[
+    {title:"Acciones",items:["Button"]},
+    {title:"Formularios",items:["Label","Input","Textarea","Select","Checkbox","RadioGroup"]},
+    {title:"Navegación",items:["Tabs"]},
+    {title:"Visualización",items:["Badge","Card","Table","Accordion","Separator"]},
+    {title:"Overlays",items:["Dialog","AlertDialog","Sheet"]},
+    {title:"Feedback",items:["Toaster","Progress","Skeleton","EmptyState","ErrorState"]},
+    {title:"Layout",items:["Header","Footer"]}
+  ]}
+];
+// Componentes en estado Draft (spec sin implementación en nexora-fit). Coincide con el «Estado» de cada spec.
+var drafts=[];
+var labels={Tipografia:"Tipografía"};
+var tema="light",ancho="escritorio",cur="Colores",f=document.getElementById("f"),stage=document.getElementById("stage");
+var sectionOf={};
+(function buildNav(){
+  var nav=document.getElementById("nav");
+  catalog.forEach(function(s){
+    var sec=document.createElement("section"),h2=document.createElement("h2"),note=document.createElement("small");
+    sec.setAttribute("aria-label",s.section);h2.textContent=s.section;note.textContent=s.note;h2.append(note);sec.append(h2);
+    s.groups.forEach(function(g){
+      var grp=document.createElement("div"),h3=document.createElement("h3");grp.className="group";h3.textContent=g.title;grp.append(h3);
+      g.items.forEach(function(n){
+        sectionOf[n]=s.section;
+        var a=document.createElement("a");a.className="item";a.href="#"+n;a.dataset.n=n;a.textContent=labels[n]||n;
+        if(drafts.indexOf(n)>=0){var tag=document.createElement("span");tag.className="draft";tag.textContent="Borrador";a.append(tag)}
+        grp.append(a);
+      });
+      sec.append(grp);
+    });
+    nav.append(sec);
+  });
+})();
+function press(sel,key,val){document.querySelectorAll(sel).forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset[key]===val))})}
+function render(){
+  if(!sectionOf[cur])cur="Colores";
+  document.documentElement.classList.toggle("dark",tema==="dark");
+  document.getElementById("t").textContent=labels[cur]||cur;
+  document.title=(labels[cur]||cur)+" · Nexora Fit · Design system";
+  document.getElementById("spec").href=sectionOf[cur]==="Componentes"?"../components/"+cur+"/README.md":"../docs/VISUAL.md";
+  document.querySelectorAll("aside a.item").forEach(function(a){if(a.dataset.n===cur)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  var src="c/"+cur+".html?tema="+tema;
+  if(f.getAttribute("src")!==src)f.src=src;
+  f.style.width=ancho==="escritorio"?"100%":ancho+"px";
+  f.style.flex="none";
+  if(ancho==="escritorio")stage.removeAttribute("data-width");else stage.setAttribute("data-width",ancho);
+  press("[data-tema]","tema",tema);press("[data-ancho]","ancho",ancho);
+}
+function save(){
+  var url=new URL(location.href);url.searchParams.set("tema",tema);url.searchParams.set("ancho",ancho);
+  // Algunas implementaciones de file:// restringen la History API.
+  try{history.replaceState(null,"",url.href)}catch(e){}
+}
+function readLocation(){
+  var p=new URLSearchParams(location.search);
+  tema=p.get("tema")==="dark"?"dark":"light";
+  ancho=["768","360"].indexOf(p.get("ancho"))>=0?p.get("ancho"):"escritorio";
+  cur=decodeURIComponent(location.hash.slice(1))||"Colores";
+  render();
+}
+document.querySelectorAll("[data-tema]").forEach(function(b){b.onclick=function(){tema=b.dataset.tema;save();render()}});
+document.querySelectorAll("[data-ancho]").forEach(function(b){b.onclick=function(){ancho=b.dataset.ancho;save();render()}});
+window.addEventListener("hashchange",readLocation);
+document.getElementById("q").oninput=function(e){
+  var t=e.target.value.toLowerCase();
+  document.querySelectorAll("aside a.item").forEach(function(a){a.hidden=a.dataset.n.toLowerCase().indexOf(t)<0&&a.textContent.toLowerCase().indexOf(t)<0});
+  document.querySelectorAll("aside .group").forEach(function(g){g.hidden=!g.querySelector("a.item:not([hidden])")});
+  document.querySelectorAll("aside nav section").forEach(function(s){s.hidden=!s.querySelector(".group:not([hidden])")});
+};
+readLocation();
+</script>
+</body>
+</html>

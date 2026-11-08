@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Overlays">
+<title>AlertDialog · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/alert-dialog.tsx · <a href="../../components/AlertDialog/README.md">Spec</a></p>
+  <p>Confirmación de toda acción irreversible: anular orden, borrar video, regenerar código. No se cierra tocando el fondo.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Destructiva</h2>
+  <p class="pv-note" style="margin-bottom:12px">El título dice qué pasa; el botón repite el verbo («Anular orden»), nunca «Sí» o «Aceptar».</p>
+  <div class="nx-dialog nx-alert is-static" data-size="default" role="alertdialog" aria-labelledby="a0-t" aria-describedby="a0-d">
+    <div class="nx-alert-header"><h2 class="nx-alert-title" id="a0-t">¿Anular la orden NXF-8F3K2M?</h2><p class="nx-alert-description" id="a0-d">El alumno pierde el acceso al plan. Esta acción no se puede deshacer.</p></div>
+    <div class="nx-dialog-footer"><button class="nx-btn" data-variant="outline" type="button">Cancelar</button><button class="nx-btn" data-variant="destructive" type="button">Anular orden</button></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Con ícono y size="sm"</h2>
+  <div class="pv-grid">
+    <div class="nx-dialog nx-alert is-static" data-size="default" role="alertdialog" aria-labelledby="a1-t">
+      <div class="nx-alert-header"><span class="nx-alert-media"><i data-icon="trash-2"></i></span><h2 class="nx-alert-title" id="a1-t">¿Borrar el video BOX-GOL-001?</h2><p class="nx-alert-description">Las rutinas que lo usan lo mostrarán como no disponible.</p></div>
+      <div class="nx-dialog-footer"><button class="nx-btn" data-variant="outline" type="button">Cancelar</button><button class="nx-btn" data-variant="destructive" type="button">Borrar video</button></div>
+    </div>
+    <div class="nx-dialog nx-alert is-static" data-size="sm" role="alertdialog" aria-labelledby="a2-t">
+      <div class="nx-alert-header"><h2 class="nx-alert-title" id="a2-t">¿Cerrar sesión en otros dispositivos?</h2></div>
+      <div class="nx-dialog-footer"><button class="nx-btn" data-variant="outline" type="button">Cancelar</button><button class="nx-btn" data-variant="default" type="button">Cerrar sesiones</button></div>
+    </div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Interactivo</h2>
+  <p class="pv-note" style="margin-bottom:12px">El foco entra en «Cancelar»; Esc cancela.</p>
+  <div class="pv-row"><button class="nx-btn" data-variant="outline" type="button" data-open="a3">Regenerar código</button></div>
+  <dialog class="nx-dialog nx-alert" id="a3" data-size="default" role="alertdialog" aria-labelledby="a3-t" aria-describedby="a3-d">
+    <div class="nx-alert-header"><h2 class="nx-alert-title" id="a3-t">¿Regenerar el código de acceso?</h2><p class="nx-alert-description" id="a3-d">El código anterior deja de funcionar.</p></div>
+    <div class="nx-dialog-footer"><button class="nx-btn" data-variant="outline" type="button" data-close>Cancelar</button><button class="nx-btn" data-variant="destructive" type="button" data-close>Regenerar código</button></div>
+  </dialog>
+</section>
+</body>
+</html>

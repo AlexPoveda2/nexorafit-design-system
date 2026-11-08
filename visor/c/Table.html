@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Visualización">
+<title>Table · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/table.tsx · <a href="../../components/Table/README.md">Spec</a></p>
+  <p>Tabla solo desde <code class="pv-code">md</code>. Por debajo, la misma información como lista de tarjetas.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Desde md</h2>
+  <p class="pv-note" style="margin-bottom:12px">Fila seleccionada en <code class="pv-code">muted</code>; hover en <code class="pv-code">muted/50</code>; montos con <code class="pv-code">tabular-nums</code> y referencias en <code class="pv-code">font-mono</code>.</p>
+  <div class="nx-only-md"><div class="nx-table-container"><table class="nx-table">
+    <caption>Últimos pagos</caption>
+    <thead><tr><th scope="col">Referencia</th><th scope="col">Alumno</th><th scope="col">Estado</th><th scope="col" style="text-align:right">Monto</th></tr></thead>
+    <tbody>
+      <tr><td class="nx-mono">NXF-8F3K2M</td><td>ana@correo.com</td><td><span class="nx-badge" data-variant="success">Aprobada</span></td><td class="nx-num" style="text-align:right">$ 160.000</td></tr>
+      <tr data-state="selected"><td class="nx-mono">NXF-2B7QX9</td><td>luis@correo.com</td><td><span class="nx-badge" data-variant="warning">Pendiente</span></td><td class="nx-num" style="text-align:right">$ 640.000</td></tr>
+      <tr><td class="nx-mono">NXF-5T1LZ4</td><td>sara@correo.com</td><td><span class="nx-badge" data-variant="danger">Rechazada</span></td><td class="nx-num" style="text-align:right">$ 160.000</td></tr>
+      <tr><td class="nx-mono">NXF-9R6VC3</td><td>juan@correo.com</td><td><span class="nx-badge" data-variant="outline">Reembolsada</span></td><td class="nx-num" style="text-align:right">$ 160.000</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="3">Total aprobado</td><td class="nx-num" style="text-align:right">$ 160.000</td></tr></tfoot>
+  </table></div></div>
+  <p class="pv-note nx-below-md">La tabla aparece desde 768 px. Cambia el ancho del visor a Escritorio.</p>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Por debajo de md: tarjetas</h2>
+  <p class="pv-note" style="margin-bottom:12px">Primera línea: dato principal e insignia a la derecha. Segunda: datos secundarios. Toda la tarjeta lleva al detalle.</p>
+  <div class="nx-below-md" style="display:grid;gap:8px">
+    <a class="nx-row-card" href="#NXF-8F3K2M"><span class="nx-row-card-top"><span>ana@correo.com</span><span class="nx-badge" data-variant="success">Aprobada</span></span><span class="nx-row-card-sub"><span class="nx-mono">NXF-8F3K2M</span> · <span class="nx-num">$ 160.000</span></span></a>
+    <a class="nx-row-card" href="#NXF-2B7QX9"><span class="nx-row-card-top"><span>luis@correo.com</span><span class="nx-badge" data-variant="warning">Pendiente</span></span><span class="nx-row-card-sub"><span class="nx-mono">NXF-2B7QX9</span> · <span class="nx-num">$ 640.000</span></span></a>
+  </div>
+  <p class="pv-note nx-only-md">La lista de tarjetas se ve por debajo de 768 px. Cambia el ancho del visor a 360 px.</p>
+</section>
+</body>
+</html>

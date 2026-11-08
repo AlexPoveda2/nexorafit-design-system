@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Overlays">
+<title>Dialog · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/dialog.tsx · <a href="../../components/Dialog/README.md">Spec</a></p>
+  <p>Ventana modal para el reproductor de video y formularios cortos del panel. <code class="pv-code">bg-popover</code>, <code class="pv-code">rounded-xl</code>, máximo 384 px desde <code class="pv-code">sm</code>.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Anatomía</h2>
+  <p class="pv-note" style="margin-bottom:12px">Encabezado (título + descripción), cuerpo y pie sobre <code class="pv-code">muted/50</code>. En celular los botones del pie se apilan, el principal arriba.</p>
+  <div class="nx-dialog is-static" role="dialog" aria-labelledby="d0-t" aria-describedby="d0-d">
+    <div class="nx-dialog-header"><h2 class="nx-dialog-title" id="d0-t">Editar precio</h2><p class="nx-dialog-description" id="d0-d">El cambio aplica a las órdenes nuevas.</p></div>
+    <div class="nx-field"><label class="nx-label" for="d0-i">Precio (COP)</label><input class="nx-input nx-num" id="d0-i" inputmode="numeric" value="160000"></div>
+    <div class="nx-dialog-footer"><button class="nx-btn" data-variant="outline" type="button">Cancelar</button><button class="nx-btn" data-variant="default" type="button">Guardar precio</button></div>
+    <button class="nx-btn nx-dialog-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar"><i data-icon="x"></i></button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Interactivo</h2>
+  <p class="pv-note" style="margin-bottom:12px">Esc, la X o un clic en el fondo cierran; el foco vuelve al botón que lo abrió.</p>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="outline" type="button" data-open="d1"><i data-icon="play"></i>Golpe recto</button>
+  </div>
+  <dialog class="nx-dialog" id="d1" aria-labelledby="d1-t" data-dismissable>
+    <div class="nx-dialog-header"><h2 class="nx-dialog-title" id="d1-t">Golpe recto</h2><p class="nx-dialog-description">Técnica · 2:40</p></div>
+    <div style="aspect-ratio:16/9;border-radius:var(--radius-lg);background:var(--color-negro);display:grid;place-items:center"><span style="width:64px;height:64px;border-radius:9999px;background:rgb(11 11 11 / .6);display:grid;place-items:center;color:#fff"><i data-icon="play" data-size="24"></i></span></div>
+    <button class="nx-btn nx-dialog-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar" data-close><i data-icon="x"></i></button>
+  </dialog>
+</section>
+</body>
+</html>

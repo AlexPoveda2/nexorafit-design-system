@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Feedback">
+<title>ErrorState · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/error-state.tsx · <a href="../../components/ErrorState/README.md">Spec</a></p>
+  <p>Error de una consulta: <code class="pv-code">CircleAlert</code> en <code class="pv-code">danger</code>, el mensaje de <code class="pv-code">error-messages.ts</code> y «Reintentar».</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Con reintento</h2>
+  <div class="nx-card"><div class="nx-state" role="alert">
+    <i data-icon="circle-alert" class="nx-state-icon"></i>
+    <p class="nx-state-text">No pudimos cargar tus planes. Revisa tu conexión e inténtalo de nuevo.</p>
+    <div class="nx-state-action"><button class="nx-btn" data-variant="outline" type="button">Reintentar</button></div>
+  </div></div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Sin reintento</h2>
+  <p class="pv-note" style="margin-bottom:12px">Los errores de un formulario no van aquí: van junto al formulario.</p>
+  <div class="nx-card"><div class="nx-state" role="alert">
+    <i data-icon="circle-alert" class="nx-state-icon"></i>
+    <p class="nx-state-text">El enlace venció o ya se usó. Pide uno nuevo.</p>
+  </div></div>
+</section>
+</body>
+</html>

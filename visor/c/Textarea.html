@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>Textarea · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/textarea.tsx · <a href="../../components/Textarea/README.md">Spec</a></p>
+  <p>Texto largo con el mismo borde y foco que <code class="pv-code">Input</code>; crece con el contenido (<code class="pv-code">field-sizing-content</code>), mínimo 64 px.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Estados</h2>
+  <div class="pv-stack">
+    <div class="nx-field"><label class="nx-label" for="t1">Lesiones o molestias</label><textarea class="nx-textarea" id="t1" aria-describedby="t1-h" placeholder="Por ejemplo: dolor en la rodilla derecha"></textarea><p class="nx-help" id="t1-h">Solo Sam ve esta información.</p></div>
+    <div class="nx-field"><label class="nx-label" for="t2">Rutina</label><textarea class="nx-textarea" id="t2" aria-invalid="true" aria-describedby="t2-e">BOX-XXX-999 Golpe recto</textarea><p class="nx-error" id="t2-e" role="alert"><i data-icon="circle-alert"></i>Hay un ID de video que no existe.</p></div>
+    <div class="nx-field"><label class="nx-label is-disabled" for="t3">Deshabilitado</label><textarea class="nx-textarea" id="t3" disabled>No editable</textarea></div>
+  </div>
+</section>
+</body>
+</html>

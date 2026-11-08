@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Feedback">
+<title>Skeleton · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/skeleton.tsx · <a href="../../components/Skeleton/README.md">Spec</a></p>
+  <p>Carga con la forma del contenido que reemplaza: <code class="pv-code">bg-muted rounded-md animate-pulse</code>. Nunca un spinner de pantalla completa.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Tarjeta de plan</h2>
+  <div class="pv-grid" aria-busy="true" aria-label="Cargando planes">
+    <div class="nx-card" style="padding-top:0"><div class="nx-skeleton" style="aspect-ratio:16/9;border-radius:0"></div><div class="nx-card-content" style="display:grid;gap:8px"><div class="nx-skeleton" style="height:28px;width:60%"></div><div class="nx-skeleton" style="height:8px"></div><div class="nx-skeleton" style="height:16px;width:40%"></div><div class="nx-skeleton" style="height:44px;width:120px"></div></div></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Filas</h2>
+  <div style="display:grid;gap:12px;max-width:40rem" aria-busy="true" aria-label="Cargando pagos">
+    <div class="nx-skeleton" style="height:20px"></div><div class="nx-skeleton" style="height:20px"></div><div class="nx-skeleton" style="height:20px;width:80%"></div>
+  </div>
+</section>
+</body>
+</html>

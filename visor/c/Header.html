@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Layout">
+<title>Header · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/header.tsx · <a href="../../components/Header/README.md">Spec</a></p>
+  <p>Barra superior fija y siempre oscura (<code class="pv-code">class="dark"</code>), sin importar el tema de la sección de abajo.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Barra</h2>
+  <p class="pv-note" style="margin-bottom:12px">Desde <code class="pv-code">md</code>: «Planes» (<code class="pv-code">ghost</code>) y «Ya tengo código» (<code class="pv-code">outline</code>). En celular: «Ya tengo código» siempre visible y el menú en un <code class="pv-code">Sheet</code>.</p>
+  <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)">
+  <header class="nx-header dark">
+    <div class="nx-header-inner">
+      <a class="nx-logo" href="#inicio">Nexora Fit</a>
+      <nav class="nx-header-desktop" aria-label="Principal"><button class="nx-btn" data-variant="ghost" type="button">Planes</button><button class="nx-btn" data-variant="outline" type="button">Ya tengo código</button></nav>
+      <div class="nx-header-mobile"><button class="nx-btn" data-variant="outline" data-size="sm" type="button">Ya tengo código</button><button class="nx-btn" data-variant="ghost" data-size="icon" type="button" aria-label="Abrir menú" data-open="hm1"><i data-icon="menu"></i></button></div>
+    </div>
+  </header>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Al hacer scroll</h2>
+  <p class="pv-note" style="margin-bottom:12px">Solo suma <code class="pv-code">shadow-sm</code>.</p>
+  <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);padding-bottom:12px">
+  <header class="nx-header dark is-scrolled">
+    <div class="nx-header-inner">
+      <a class="nx-logo" href="#inicio">Nexora Fit</a>
+      <nav class="nx-header-desktop" aria-label="Principal"><button class="nx-btn" data-variant="ghost" type="button">Planes</button><button class="nx-btn" data-variant="outline" type="button">Ya tengo código</button></nav>
+      <div class="nx-header-mobile"><button class="nx-btn" data-variant="outline" data-size="sm" type="button">Ya tengo código</button><button class="nx-btn" data-variant="ghost" data-size="icon" type="button" aria-label="Abrir menú" data-open="hm2"><i data-icon="menu"></i></button></div>
+    </div>
+  </header>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Menú móvil</h2>
+  <dialog class="nx-sheet dark" id="hm1" data-side="right" aria-labelledby="hm1-t" data-dismissable>
+    <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="hm1-t" style="font-family:var(--font-display);font-size:20px;font-weight:400">Nexora Fit</h2></div>
+    <nav class="nx-sheet-nav" aria-label="Menú"><button class="nx-btn" data-variant="ghost" type="button" data-close>Planes</button></nav>
+    <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar" data-close><i data-icon="x"></i></button>
+  </dialog>
+  <dialog class="nx-sheet dark" id="hm2" data-side="right" aria-labelledby="hm2-t" data-dismissable>
+    <div class="nx-sheet-header"><h2 class="nx-sheet-title" id="hm2-t" style="font-family:var(--font-display);font-size:20px;font-weight:400">Nexora Fit</h2></div>
+    <nav class="nx-sheet-nav" aria-label="Menú"><button class="nx-btn" data-variant="ghost" type="button" data-close>Planes</button></nav>
+    <button class="nx-btn nx-sheet-close" data-variant="ghost" data-size="icon" type="button" aria-label="Cerrar" data-close><i data-icon="x"></i></button>
+  </dialog>
+  <p class="pv-note">Con el visor a 360 px, el botón de menú abre el <code class="pv-code">Sheet</code> oscuro desde la derecha.</p>
+</section>
+</body>
+</html>

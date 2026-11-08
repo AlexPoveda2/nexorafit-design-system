@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Feedback">
+<title>Toaster · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/sonner.tsx · <a href="../../components/Toaster/README.md">Spec</a></p>
+  <p>Avisos breves de <code class="pv-code">sonner</code> con los colores de <code class="pv-code">popover</code>: 4 s, abajo al centro en celular y abajo a la derecha en escritorio.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Tipos</h2>
+  <p class="pv-note" style="margin-bottom:12px">Los errores de un formulario no van en un aviso: van junto al formulario.</p>
+  <div style="display:grid;gap:8px;max-width:356px">
+    <div class="nx-toast" role="status"><i data-icon="circle-check"></i><div class="nx-toast-body"><div class="nx-toast-title">Código copiado</div></div></div>
+    <div class="nx-toast" role="status"><i data-icon="info"></i><div class="nx-toast-body"><div class="nx-toast-title">Tu acceso vence en 5 días</div></div></div>
+    <div class="nx-toast" role="status"><i data-icon="triangle-alert"></i><div class="nx-toast-body"><div class="nx-toast-title">Pago pendiente</div><div class="nx-toast-description">Te enviaremos el código a tu correo.</div></div></div>
+    <div class="nx-toast" role="status"><i data-icon="octagon-x"></i><div class="nx-toast-body"><div class="nx-toast-title">No pudimos guardar el día</div><div class="nx-toast-description">Inténtalo de nuevo.</div></div></div>
+    <div class="nx-toast" role="status"><i data-icon="loader-circle" class="nx-spin"></i><div class="nx-toast-body"><div class="nx-toast-title">Subiendo video…</div></div></div>
+    <div class="nx-toast" role="status"><div class="nx-toast-body"><div class="nx-toast-title">Ejercicio borrado</div></div><button class="nx-toast-action" type="button">Deshacer</button></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Interactivo</h2>
+  <p class="pv-note" style="margin-bottom:12px">Con acción («Deshacer») dura 5 s.</p>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="outline" type="button" data-toast="success" data-title="Día guardado">Guardar día</button>
+    <button class="nx-btn" data-variant="outline" type="button" data-toast="" data-title="Ejercicio borrado" data-action="Deshacer">Borrar ejercicio</button>
+    <button class="nx-btn" data-variant="outline" type="button" data-toast="error" data-title="No pudimos marcar el día" data-description="Volvimos al estado anterior.">Simular error</button>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Visualización">
+<title>Accordion · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/accordion.tsx · <a href="../../components/Accordion/README.md">Spec</a></p>
+  <p>Preguntas frecuentes y semanas del plan. Disparador de 56 px como mínimo y un solo <code class="pv-code">ChevronDown</code> que gira 180°.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Preguntas frecuentes (uno abierto a la vez)</h2>
+  <div class="nx-accordion" data-type="single" style="max-width:48rem">
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="f1" aria-expanded="true" aria-controls="f1-p">¿Cómo recibo mi plan?<i data-icon="chevron-down"></i></button></h3><div class="nx-acc-panel" id="f1-p" role="region" aria-labelledby="f1"><div><p>Al aprobarse el pago ves tu código de acceso y te lo enviamos al correo.</p><p>Con ese código entras a «Mis planes» desde cualquier dispositivo.</p></div></div></div>
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="f2" aria-expanded="false" aria-controls="f2-p">¿Necesito equipo?<i data-icon="chevron-down"></i></button></h3><div class="nx-acc-panel" id="f2-p" role="region" aria-labelledby="f2" hidden><div><p>Cada plan dice qué equipo usa. El nivel básico se puede hacer en casa.</p></div></div></div>
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="f3" aria-expanded="false" aria-controls="f3-p">¿Por cuánto tiempo tengo acceso?<i data-icon="chevron-down"></i></button></h3><div class="nx-acc-panel" id="f3-p" role="region" aria-labelledby="f3" hidden><div><p>La fecha aparece en cada plan: «Acceso hasta el 23 oct 2027».</p></div></div></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Semanas del plan</h2>
+  <div class="nx-accordion">
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="w1" aria-expanded="false" aria-controls="w1-p"><span>Semana 1</span><span class="pv-note" style="margin-left:auto">5 de 5 días</span><i data-icon="chevron-down" style="margin-left:8px"></i></button></h3><div class="nx-acc-panel" id="w1-p" role="region" aria-labelledby="w1" hidden><div><p>Día 1 · Guardia y recto</p></div></div></div>
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="w2" aria-expanded="true" aria-controls="w2-p"><span>Semana 2</span><span class="pv-note" style="margin-left:auto">3 de 5 días</span><i data-icon="chevron-down" style="margin-left:8px"></i></button></h3><div class="nx-acc-panel" id="w2-p" role="region" aria-labelledby="w2"><div><p>Se abre la primera semana con días sin completar.</p></div></div></div>
+    <div class="nx-acc-item"><h3 style="display:flex"><button class="nx-acc-trigger" type="button" id="w3" aria-expanded="false" aria-controls="w3-p" disabled><span>Semana 3</span><span class="pv-note" style="margin-left:auto">Deshabilitada</span><i data-icon="chevron-down" style="margin-left:8px"></i></button></h3><div class="nx-acc-panel" id="w3-p" role="region" aria-labelledby="w3" hidden><div></div></div></div>
+  </div>
+</section>
+</body>
+</html>

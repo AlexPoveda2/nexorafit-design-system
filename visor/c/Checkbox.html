@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>Checkbox · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/checkbox.tsx · <a href="../../components/Checkbox/README.md">Spec</a></p>
+  <p>Casilla de 20 px con zona táctil de 44 px. Marcada en <code class="pv-code">primary</code>, nunca en rojo.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Estados</h2>
+  <div class="pv-row" style="gap:24px">
+    <span class="pv-cell"><input class="nx-check" type="checkbox" aria-label="Sin marcar"><span class="pv-note">Sin marcar</span></span>
+    <span class="pv-cell"><input class="nx-check" type="checkbox" checked aria-label="Marcada"><span class="pv-note">Marcada</span></span>
+    <span class="pv-cell"><input class="nx-check is-focus" type="checkbox" aria-label="Foco"><span class="pv-note">Foco</span></span>
+    <span class="pv-cell"><input class="nx-check" type="checkbox" aria-invalid="true" aria-label="Con error"><span class="pv-note">Error</span></span>
+    <span class="pv-cell"><input class="nx-check" type="checkbox" disabled aria-label="Deshabilitada"><span class="pv-note">Deshabilitada</span></span>
+    <span class="pv-cell"><input class="nx-check" type="checkbox" checked disabled aria-label="Marcada y deshabilitada"><span class="pv-note">Marcada · deshab.</span></span>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Grupo con etiqueta</h2>
+  <p class="pv-note" style="margin-bottom:12px">La fila completa (casilla + texto) mide al menos 44 px.</p>
+  <fieldset class="nx-fieldset">
+    <legend>¿Qué deportes te interesan?</legend>
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="c1" checked><label class="nx-label" for="c1">Boxeo</label></div>
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="c2"><label class="nx-label" for="c2">Muay thai</label></div>
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="c3"><label class="nx-label" for="c3">Funcional</label></div>
+  </fieldset>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Términos</h2>
+  <div class="nx-field" style="max-width:28rem">
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="c4" aria-invalid="true" aria-describedby="c4-e"><label class="nx-label" for="c4" style="line-height:1.4">Acepto los términos y la política de privacidad</label></div>
+    <p class="nx-error" id="c4-e" role="alert"><i data-icon="circle-alert"></i>Acepta los términos para continuar.</p>
+  </div>
+</section>
+</body>
+</html>

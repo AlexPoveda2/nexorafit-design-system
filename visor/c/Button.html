@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Acciones">
+<title>Button · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/button.tsx · <a href="../../components/Button/README.md">Spec</a></p>
+  <p>Acción de la pantalla. <code class="pv-code">cta</code> es la única variante roja: una por bloque visible y solo para lo que vende.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Variantes</h2>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="cta" type="button">Comprar plan de Boxeo</button>
+    <button class="nx-btn" data-variant="default" type="button">Entrar</button>
+    <button class="nx-btn" data-variant="secondary" type="button">Quiero un plan personalizado</button>
+    <button class="nx-btn" data-variant="outline" type="button">Ver detalle</button>
+    <button class="nx-btn" data-variant="ghost" type="button">Planes</button>
+    <button class="nx-btn" data-variant="link" type="button">o llévate el pack completo</button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Destructivo</h2>
+  <p class="pv-note" style="margin-bottom:12px">Solo dentro de un <code class="pv-code">AlertDialog</code> de confirmación.</p>
+  <div class="pv-row"><button class="nx-btn" data-variant="destructive" type="button">Anular orden</button></div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Tamaños</h2>
+  <p class="pv-note" style="margin-bottom:12px"><code class="pv-code">sm</code> solo en tablas del panel en escritorio, nunca en celular.</p>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="outline" data-size="sm" type="button">sm · 36 px</button>
+    <button class="nx-btn" data-variant="outline" type="button">default · 44 px</button>
+    <button class="nx-btn" data-variant="outline" data-size="lg" type="button">lg · 48 px</button>
+    <button class="nx-btn" data-variant="outline" data-size="icon" type="button" aria-label="Copiar código"><i data-icon="copy"></i></button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Estados · default</h2>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="default" type="button">Normal</button>
+    <button class="nx-btn is-hover" data-variant="default" type="button">Hover</button>
+    <button class="nx-btn is-focus" data-variant="default" type="button">Foco</button>
+    <button class="nx-btn" data-variant="default" type="button" disabled>Deshabilitado</button>
+    <button class="nx-btn" data-variant="default" type="button" disabled aria-busy="true"><i data-icon="loader-circle" class="nx-spin"></i>Guardando…</button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Estados · cta</h2>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="cta" type="button">Normal</button>
+    <button class="nx-btn is-hover" data-variant="cta" type="button">Hover / presionado</button>
+    <button class="nx-btn is-focus" data-variant="cta" type="button">Foco</button>
+    <button class="nx-btn" data-variant="cta" type="button" disabled>Deshabilitado</button>
+    <button class="nx-btn" data-variant="cta" type="button" disabled aria-busy="true"><i data-icon="loader-circle" class="nx-spin"></i>Procesando…</button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Cargando (interactivo)</h2>
+  <p class="pv-note" style="margin-bottom:12px">Se deshabilita, muestra <code class="pv-code">LoaderCircle</code> a la izquierda y pasa a gerundio. No cambia de tamaño.</p>
+  <div class="pv-row">
+    <button class="nx-btn" data-variant="default" data-size="lg" type="button" data-loading="Guardando…">Guardar día</button>
+    <button class="nx-btn" data-variant="cta" data-size="lg" type="button" data-loading="Procesando…"><i data-icon="credit-card"></i>Pagar $ 160.000</button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Ancho completo en celular</h2>
+  <p class="pv-note" style="margin-bottom:12px"><code class="pv-code">w-full sm:w-auto</code> para el botón principal de un formulario o tarjeta.</p>
+  <div class="pv-stack" style="max-width:none">
+    <button class="nx-btn is-block is-block-sm-auto" data-variant="default" data-size="lg" type="button">Entrar</button>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Sobre la sección roja del pack</h2>
+  <p class="pv-note" style="margin-bottom:12px">Nunca rojo sobre rojo: dentro de la sección del pack el botón es <code class="pv-code">default</code> en oscuro (blanco con texto negro).</p>
+  <div class="dark pv-band" style="background:var(--cta);color:var(--cta-foreground);border:0;display:grid;gap:12px;justify-items:start">
+    <p style="font-family:var(--font-display);font-size:var(--text-display-3);line-height:1.1">Llévate los 4 deportes</p>
+    <button class="nx-btn" data-variant="default" type="button" data-size="lg">Comprar pack completo</button>
+  </div>
+</section>
+</body>
+</html>

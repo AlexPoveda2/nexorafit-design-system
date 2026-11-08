@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>Input · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/input.tsx · <a href="../../components/Input/README.md">Spec</a></p>
+  <p>Campo de 44 px con texto a 16 px siempre (con menos, Safari en iPhone hace zoom). Borde <code class="pv-code">input</code>.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Estados</h2>
+  <p class="pv-note" style="margin-bottom:12px">Error: borde rojo, <code class="pv-code">aria-invalid="true"</code> y debajo el mensaje con <code class="pv-code">CircleAlert</code> en <code class="pv-code">danger</code> y <code class="pv-code">role="alert"</code>.</p>
+  <div class="pv-stack">
+    <div class="nx-field"><label class="nx-label" for="i1">Nombre</label><input class="nx-input" id="i1" autocomplete="name"></div>
+    <div class="nx-field"><label class="nx-label" for="i2">Correo</label><input class="nx-input" id="i2" type="email" autocomplete="email" placeholder="tu@correo.com" aria-describedby="i2-h"><p class="nx-help" id="i2-h">Te enviaremos ahí tu código de acceso.</p></div>
+    <div class="nx-field"><label class="nx-label" for="i3">Foco</label><input class="nx-input is-focus" id="i3" value="Santiago"></div>
+    <div class="nx-field"><label class="nx-label" for="i4">Correo</label><input class="nx-input" id="i4" type="email" value="santiago@correo" aria-invalid="true" aria-describedby="i4-e"><p class="nx-error" id="i4-e" role="alert"><i data-icon="circle-alert"></i>Escribe un correo válido, como tu@correo.com.</p></div>
+    <div class="nx-field"><label class="nx-label is-disabled" for="i5">Deshabilitado</label><input class="nx-input" id="i5" value="No editable" disabled></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Código de acceso</h2>
+  <p class="pv-note" style="margin-bottom:12px"><code class="pv-code">font-mono text-xl tracking-widest uppercase</code>, sin autocompletar ni corrector.</p>
+  <div class="pv-stack">
+    <div class="nx-field"><label class="nx-label" for="i6">Código de acceso</label><input class="nx-input is-mono" id="i6" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="NXF-XXXX-XXXX"></div>
+  </div>
+</section>
+</body>
+</html>

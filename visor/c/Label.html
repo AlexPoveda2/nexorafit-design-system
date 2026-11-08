@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>Label · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/label.tsx · <a href="../../components/Label/README.md">Spec</a></p>
+  <p>Etiqueta visible siempre, arriba del campo. Radix <code class="pv-code">Label</code>, 14 px, peso 500.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Con campo</h2>
+  <div class="pv-stack">
+    <div class="nx-field"><label class="nx-label" for="l1">Correo</label><input class="nx-input" id="l1" type="email" autocomplete="email" placeholder="tu@correo.com"></div>
+    <div class="nx-field"><label class="nx-label" for="l2">WhatsApp <span class="nx-opt">(opcional)</span></label><input class="nx-input" id="l2" type="tel" inputmode="tel" autocomplete="tel"></div>
+  </div>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Con casilla y deshabilitado</h2>
+  <p class="pv-note" style="margin-bottom:12px">Con el control deshabilitado, la etiqueta baja al 50 % (<code class="pv-code">peer-disabled</code>).</p>
+  <div class="pv-stack">
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="l3"><label class="nx-label" for="l3">Acepto los términos</label></div>
+    <div class="nx-choice"><input class="nx-check" type="checkbox" id="l4" disabled><label class="nx-label" for="l4">Opción no disponible</label></div>
+  </div>
+</section>
+</body>
+</html>

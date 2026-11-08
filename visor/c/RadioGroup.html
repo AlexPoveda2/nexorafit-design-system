@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="nx-group" content="Componentes · Formularios">
+<title>RadioGroup · Nexora Fit</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../componentes.css">
+<script src="../componentes.js"></script>
+</head>
+<body class="pv-page">
+<header class="pv-intro">
+  <p class="pv-src">nexora-fit · src/shared/ui/radio-group.tsx · <a href="../../components/RadioGroup/README.md">Spec</a></p>
+  <p>Una opción entre varias. Radio de 20 px con zona táctil de 44 px; marcado en <code class="pv-code">primary</code>.</p>
+</header>
+<section class="pv">
+  <h2 class="pv-t">Grupo</h2>
+  <p class="pv-note" style="margin-bottom:12px">Flechas para moverse entre opciones; Tab sale del grupo.</p>
+  <fieldset class="nx-fieldset" role="radiogroup">
+    <legend>¿Cuál es tu nivel?</legend>
+    <div class="nx-radio-group">
+      <div class="nx-choice"><input class="nx-radio" type="radio" name="nivel" id="r1" checked><label class="nx-label" for="r1">Básico</label></div>
+      <div class="nx-choice"><input class="nx-radio" type="radio" name="nivel" id="r2"><label class="nx-label" for="r2">Intermedio</label></div>
+      <div class="nx-choice"><input class="nx-radio" type="radio" name="nivel" id="r3" disabled><label class="nx-label" for="r3">Avanzado (próximamente)</label></div>
+    </div>
+  </fieldset>
+</section>
+<section class="pv">
+  <h2 class="pv-t">Con error</h2>
+  <fieldset class="nx-fieldset">
+    <legend>¿Cuál es tu nivel?</legend>
+    <div class="nx-radio-group">
+      <div class="nx-choice"><input class="nx-radio" type="radio" name="nivel2" id="r4" aria-invalid="true"><label class="nx-label" for="r4">Básico</label></div>
+      <div class="nx-choice"><input class="nx-radio" type="radio" name="nivel2" id="r5" aria-invalid="true"><label class="nx-label" for="r5">Intermedio</label></div>
+    </div>
+    <p class="nx-error" role="alert"><i data-icon="circle-alert"></i>Elige tu nivel.</p>
+  </fieldset>
+</section>
+</body>
+</html>
